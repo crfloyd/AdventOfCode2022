@@ -11,7 +11,7 @@ interface Props {
 	setDay: (day: number) => void;
 }
 
-const CURRENT_DAY = 2;
+const CURRENT_DAY = new Date().getDate();
 
 const Days = [...Array(25).keys()].map((k) => k + 1);
 
