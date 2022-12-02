@@ -1,4 +1,13 @@
-import { Accordion, Code, Space, Spoiler, Stack, Text } from "@mantine/core";
+import {
+	Accordion,
+	Anchor,
+	Code,
+	Space,
+	Spoiler,
+	Stack,
+	Text,
+	Title,
+} from "@mantine/core";
 
 import Input1 from "./input1";
 import Input2 from "./input2";
@@ -82,8 +91,13 @@ const Day1 = () => {
 
 	return (
 		<Stack ml={20}>
-			<h1>Day 1</h1>
-			<Text size="md">Calorie Counting</Text>
+			<Anchor
+				href="https://adventofcode.com/2022/day/1"
+				style={{ textDecoration: "none" }}
+			>
+				<h2>Day 1</h2>
+			</Anchor>
+			<Title order={3}>Calorie Counting</Title>
 			<Accordion
 				defaultValue="part1"
 				mr={50}

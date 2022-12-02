@@ -1,4 +1,5 @@
-import { Stack, Accordion, Text } from "@mantine/core";
+import { Stack, Accordion, Text, Anchor, Title } from "@mantine/core";
+import { useMemo } from "react";
 import Input1 from "./input1";
 
 enum RPS {
@@ -97,19 +98,27 @@ const calculateMovesTotal = (moves: RPS[][]) => {
 };
 
 const Day2 = () => {
-	const testInput = `A Y
-	B X
-	C Z`;
-	const input1 = parseMoves(splitInput(Input1));
-	const input1Result = calculateMovesTotal(input1);
+	const input1Result = useMemo(() => {
+		console.log("a");
+		const input1 = parseMoves(splitInput(Input1));
+		return calculateMovesTotal(input1);
+	}, []);
 
-	const input2 = parseMovesPart2(splitInput(Input1));
-	const input2Result = calculateMovesTotal(input2);
+	const input2Result = useMemo(() => {
+		console.log("b");
+		const input2 = parseMovesPart2(splitInput(Input1));
+		return calculateMovesTotal(input2);
+	}, []);
 
 	return (
 		<Stack ml={20}>
-			<h1>Day 2</h1>
-			<Text size="md">Rock Paper Scissors</Text>
+			<Anchor
+				href="https://adventofcode.com/2022/day/2"
+				style={{ textDecoration: "none" }}
+			>
+				<h2>Day 2</h2>
+			</Anchor>
+			<Title order={3}>Rock Paper Scissors</Title>
 			<Accordion
 				defaultValue="part1"
 				mr={50}

@@ -1,9 +1,11 @@
 import {
+	Anchor,
 	AppShell,
 	Header,
 	MantineProvider,
 	Navbar,
 	Text,
+	Title,
 	useMantineTheme,
 } from "@mantine/core";
 import { useState } from "react";
@@ -28,8 +30,15 @@ export default function App() {
 					</Navbar>
 				}
 				header={
-					<Header height={60} p="xs">
-						<Text size="xl">Advent of Code 2022</Text>
+					<Header height={75} p="xs">
+						<Anchor
+							href="https://adventofcode.com/"
+							style={{
+								textDecoration: "none",
+							}}
+						>
+							<Title order={1}>Advent of Code 2022</Title>
+						</Anchor>
 					</Header>
 				}
 				styles={{
