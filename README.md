@@ -5,3 +5,5 @@ This project contains my solutions to the [AdventOfCode 2022](https://adventofco
 ## Instructions to run
 
 This project uses vite so after installing all dependencies (run `npm install` from the project root), the app can be started using: `npm run dev`
+
+![AdventOfCode 2022](./screenShot.png)
