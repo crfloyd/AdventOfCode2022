@@ -103,7 +103,7 @@ const Day1 = () => {
 				mr={50}
 				mt={30}
 				chevronPosition="left"
-				variant="contained"
+				variant="separated"
 			>
 				<Accordion.Item value="part1">
 					<Accordion.Control>Part 1</Accordion.Control>

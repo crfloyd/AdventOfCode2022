@@ -1,5 +1,6 @@
 import { Stack, Accordion, Text, Anchor, Title } from "@mantine/core";
 import { useMemo } from "react";
+import { splitLines } from "../../../utils/utils";
 import Input1 from "./input1";
 
 enum RPS {
@@ -7,10 +8,6 @@ enum RPS {
 	Paper,
 	Scissors,
 }
-
-const splitInput = (input: string): string[] => {
-	return input.split("\n");
-};
 
 const parseOpponentMove = (move: string): RPS => {
 	return move === "A" ? RPS.Rock : move === "B" ? RPS.Paper : RPS.Scissors;
@@ -100,13 +97,13 @@ const calculateMovesTotal = (moves: RPS[][]) => {
 const Day2 = () => {
 	const input1Result = useMemo(() => {
 		console.log("a");
-		const input1 = parseMoves(splitInput(Input1));
+		const input1 = parseMoves(splitLines(Input1));
 		return calculateMovesTotal(input1);
 	}, []);
 
 	const input2Result = useMemo(() => {
 		console.log("b");
-		const input2 = parseMovesPart2(splitInput(Input1));
+		const input2 = parseMovesPart2(splitLines(Input1));
 		return calculateMovesTotal(input2);
 	}, []);
 
@@ -124,7 +121,7 @@ const Day2 = () => {
 				mr={50}
 				mt={30}
 				chevronPosition="left"
-				variant="contained"
+				variant="separated"
 			>
 				<Accordion.Item value="part1">
 					<Accordion.Control>Part 1</Accordion.Control>
