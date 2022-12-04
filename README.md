@@ -1,6 +1,6 @@
 # AdventOfCode2022
 
-This project contains my solutions to the AdventOfCode 2022 challenges from https://adventofcode.com/
+This project contains my solutions to the [AdventOfCode 2022](https://adventofcode.com/) challenges. This year, I am doing all the code challenges in a React.js project using Typescript. The project uses [Mantine](https://mantine.dev/) as a component library.
 
 ## Instructions to run
 
