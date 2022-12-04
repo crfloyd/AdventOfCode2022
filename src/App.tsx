@@ -9,6 +9,7 @@ import {
 	useMantineTheme,
 } from "@mantine/core";
 import { useState } from "react";
+import Day4 from "./components/Day4/Day4";
 import DayList from "./components/DayList";
 import Day1 from "./components/Days/Day1/Day1";
 import Day2 from "./components/Days/Day2/Day2";
@@ -54,6 +55,7 @@ export default function App() {
 				{day === 1 && <Day1 />}
 				{day === 2 && <Day2 />}
 				{day === 3 && <Day3 />}
+				{day === 4 && <Day4 />}
 			</AppShell>
 		</MantineProvider>
 	);
