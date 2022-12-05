@@ -1,6 +1,6 @@
 import { Stack, Anchor, Title, Accordion, Text, Input } from "@mantine/core";
 import { useMemo } from "react";
-import { splitLines } from "../../utils/utils";
+import { splitLines } from "../../../utils/utils";
 import { Input1 } from "./input";
 
 const testInput = `2-4,6-8
