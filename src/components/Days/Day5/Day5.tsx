@@ -1,13 +1,9 @@
 import { Stack, Anchor, Title, Accordion, Text, Card } from "@mantine/core";
 import { useEffect, useMemo, useState } from "react";
-import {
-	splitLines,
-	TowerArrangement,
-	TowerColumn,
-	TowerInstruction,
-} from "../../../utils/utils";
+import { splitLines } from "../../../utils/utils";
 
 import { Input1 } from "./input";
+import { TowerArrangement, TowerInstruction } from "./models";
 
 const TestInput = `    [D]    
 [N] [C]    
@@ -51,8 +47,6 @@ const processInputPart1 = (input: string) => {
 	const towers = parseTowers(configuration);
 	const instructions = parseInstructions(instructionText);
 	processInstructions(instructions, towers);
-
-	// return towers.getTopItemString();
 	return towers;
 };
 
@@ -62,13 +56,10 @@ const processInputPart2 = (input: string) => {
 	const instructions = parseInstructions(instructionText);
 	instructions.forEach((ins) => (ins.maintainOrder = true));
 	processInstructions(instructions, towers);
-
-	// return towers.getTopItemString();
 	return towers;
 };
 
 const Day5 = () => {
-	// const testTowersItems = processInputPart2(TestInput);
 	const part1Answer = useMemo(
 		() => processInputPart1(Input1).getTopItemString(),
 		[]
