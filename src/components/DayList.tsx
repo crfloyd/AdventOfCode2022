@@ -19,7 +19,7 @@ const DayList = ({ setDay }: Props) => {
 	return (
 		<SimpleGrid cols={4}>
 			{Days.map((d) => (
-				<Button disabled={d > CURRENT_DAY} onClick={() => setDay(d)} key={d}>
+				<Button onClick={() => setDay(d)} key={d}>
 					{d}
 				</Button>
 			))}
